@@ -1,6 +1,6 @@
 # eslint-config-ts
 
-A shared ESLint configuration for TypeScript and React projects.
+A shared ESLint configuration for TypeScript projects.
 
 ## Installation
 
