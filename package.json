@@ -1,6 +1,6 @@
 {
     "name": "@uvarovag/eslint-config-ts",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "main": "eslint.config.js",
     "type": "module",
     "scripts": {
@@ -37,7 +37,7 @@
         "globals": "^15.13.0"
     },
     "devDependencies": {
-        "@uvarovag/prettier-config-ts-react": "^1.0.0",
+        "@uvarovag/prettier-config": "^1.0.1",
         "prettier": "^3.4.1"
     },
     "peerDependencies": {
