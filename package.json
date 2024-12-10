@@ -1,0 +1,45 @@
+{
+    "name": "@uvarovag/eslint-config-ts",
+    "version": "1.0.0",
+    "main": "eslint.config.js",
+    "type": "module",
+    "scripts": {
+        "login": "npm login",
+        "publish": "npm publish --access public",
+        "fix": "npm pkg fix && npx prettier --write '**/*.{ts,tsx,js,json,css,html,md}'"
+    },
+    "keywords": [
+        "eslint",
+        "eslint-config",
+        "code-style",
+        "formatting",
+        "shared-config",
+        "coding-standards"
+    ],
+    "author": "@uvarovag",
+    "license": "MIT",
+    "description": "eslint-config-ts",
+    "homepage": "https://github.com/uvarovag/eslint-config-ts/blob/master/README.md",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/uvarovag/eslint-config-ts.git"
+    },
+    "dependencies": {
+        "@eslint/js": "^9.16.0",
+        "@typescript-eslint/eslint-plugin": "^8.18.0",
+        "@typescript-eslint/parser": "^8.18.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-import-resolver-typescript": "^3.7.0",
+        "eslint-plugin-import": "^2.31.0",
+        "eslint-plugin-prettier": "^5.2.1",
+        "eslint-plugin-unicorn": "^56.0.1",
+        "globals": "^15.13.0"
+    },
+    "devDependencies": {
+        "@uvarovag/prettier-config-ts-react": "^1.0.0",
+        "prettier": "^3.4.1"
+    },
+    "peerDependencies": {
+        "eslint": "^9.16.0"
+    }
+}
