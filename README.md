@@ -1,6 +1,6 @@
 # eslint-config-ts
 
-A shared ESLint configuration for TypeScript projects.
+A shared ESLint 9 Flat configuration for TypeScript projects.
 
 ## Installation
 
