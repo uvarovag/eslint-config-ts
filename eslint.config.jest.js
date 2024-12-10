@@ -1,7 +1,7 @@
 import jestPlugin from 'eslint-plugin-jest'
 import globals from 'globals'
 
-import { transformGlobals } from './utils'
+import { transformGlobals } from './utils/transformGlobals.js'
 
 export default [
     {

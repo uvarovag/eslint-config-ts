@@ -7,7 +7,7 @@ import prettierPlugin from 'eslint-plugin-prettier'
 import unicornPlugin from 'eslint-plugin-unicorn'
 import globals from 'globals'
 
-import { transformGlobals } from './utils'
+import { transformGlobals } from './utils/transformGlobals.js'
 
 export default [
     jsConfig.configs.recommended,
