@@ -1,6 +1,6 @@
 {
     "name": "@uvarovag/eslint-config-ts",
-    "version": "1.0.12",
+    "version": "1.0.13",
     "main": "eslint.config.js",
     "type": "module",
     "scripts": {
@@ -18,7 +18,7 @@
     ],
     "author": "@uvarovag",
     "license": "MIT",
-    "description": "eslint-config-ts",
+    "description": "A shared ESLint 9 Flat configuration for TypeScript projects",
     "homepage": "https://github.com/uvarovag/eslint-config-ts/blob/master/README.md",
     "repository": {
         "type": "git",
