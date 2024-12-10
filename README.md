@@ -10,10 +10,62 @@ To use this configuration in your project, install the required dependencies:
 npm install --save-dev @uvarovag/eslint-config-ts eslint@^9.16.0
 ```
 
-## Usage: Create a `eslint.config.js` file
+## Usage
+
+### Step 1: Create a `eslint.config.js` file
 
 ```js
-import featureSliced from '@uvarovag/eslint-config-ts'
+import tsConfig from '@uvarovag/eslint-config-ts'
 
 export default [...tsConfig]
+```
+
+### Step 2: Run ESLint
+
+```bash
+npx eslint '**/*.{ts,tsx}' --fix
+```
+
+## Use together with Prettier
+
+## Installation
+
+To use this configuration in your project, install the necessary dependencies:
+
+```bash
+npm install --save-dev @uvarovag/prettier-config-ts-react prettier
+```
+
+### Step 1: Create a `.prettierrc` file
+
+```json
+"@uvarovag/prettier-config-ts-react"
+```
+
+### Step 2: Format your code
+
+```bash
+npx prettier --write '**/*.{ts,tsx,js,json,css,html,md}'
+```
+
+## Use Prettier and ESLint in Visual Studio Code
+
+### Step 1: Install Plugins
+
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+
+### Step 2: Add the following to settings.json in VSCode
+
+```json
+{
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.requireConfig": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+    "eslint.experimental.useFlatConfig": true
+}
 ```
