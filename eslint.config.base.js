@@ -72,7 +72,7 @@ export default [
         },
     },
     {
-        files: ['webpack.config.ts'],
+        files: ['webpack.config.{js,ts,cjs,cts,mjs,mts}'],
         languageOptions: {
             globals: {
                 ...transformGlobals(globals.node),
