@@ -7,8 +7,6 @@ import prettierPlugin from 'eslint-plugin-prettier'
 import unicornPlugin from 'eslint-plugin-unicorn'
 import globals from 'globals'
 
-import { transformGlobals } from './utils/transformGlobals.js'
-
 export default [
     jsConfig.configs.recommended,
     prettierConfig,
@@ -19,7 +17,7 @@ export default [
             sourceType: 'module',
             ecmaVersion: 'latest',
             globals: {
-                ...transformGlobals(globals.browser),
+                ...globals.browser,
                 IS_DEV: 'readonly',
             },
         },
@@ -74,9 +72,7 @@ export default [
     {
         files: ['webpack.config.{js,ts,cjs,cts,mjs,mts}'],
         languageOptions: {
-            globals: {
-                ...transformGlobals(globals.node),
-            },
+            globals: globals.node,
         },
     },
     {
