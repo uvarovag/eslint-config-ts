@@ -19,6 +19,7 @@ export default [
             globals: {
                 ...globals.browser,
                 IS_DEV: 'readonly',
+                BASE_URL: 'readonly',
             },
         },
         plugins: {

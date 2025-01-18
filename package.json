@@ -1,6 +1,6 @@
 {
     "name": "@uvarovag/eslint-config-ts",
-    "version": "1.0.18",
+    "version": "1.0.19",
     "description": "Shared ESLint 9 Flat configuration for TypeScript projects",
     "main": "eslint.config.js",
     "type": "module",
