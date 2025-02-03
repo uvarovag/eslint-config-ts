@@ -39,6 +39,7 @@ export default [
             },
         },
         rules: {
+            ...unicornPlugin.configs.recommended.rules,
             ...tsPlugin.configs.recommended.rules,
             'import/extensions': [
                 'error',
@@ -74,6 +75,16 @@ export default [
                     prefer: 'type-imports',
                 },
             ],
+            'unicorn/filename-case': [
+                'error',
+                {
+                    cases: {
+                        camelCase: true,
+                        pascalCase: true,
+                    },
+                },
+            ],
+            'unicorn/prefer-spread': 'off',
         },
     },
     {
