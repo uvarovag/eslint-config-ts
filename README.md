@@ -7,7 +7,7 @@ Shared ESLint 9 Flat configuration for TypeScript projects.
 To use this configuration in your project, install the required dependencies:
 
 ```bash
-npm install --save-dev @uvarovag/eslint-config-ts eslint@^9.16.0
+npm install --save-dev @uvarovag/eslint-config-ts eslint@^9.20.1
 ```
 
 ## Usage

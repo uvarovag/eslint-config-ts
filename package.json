@@ -1,6 +1,6 @@
 {
     "name": "@uvarovag/eslint-config-ts",
-    "version": "1.0.22",
+    "version": "1.1.0",
     "description": "Shared ESLint 9 Flat configuration for TypeScript projects",
     "main": "eslint.config.js",
     "type": "module",
@@ -24,22 +24,21 @@
         "url": "git+https://github.com/uvarovag/eslint-config-ts.git"
     },
     "dependencies": {
-        "@eslint/js": "^9.16.0",
-        "@typescript-eslint/eslint-plugin": "^8.18.0",
-        "@typescript-eslint/parser": "^8.18.0",
+        "@eslint/js": "^9.20.0",
         "eslint-config-prettier": "^9.1.0",
         "eslint-import-resolver-typescript": "^3.7.0",
         "eslint-plugin-import": "^2.31.0",
         "eslint-plugin-jest": "^28.9.0",
         "eslint-plugin-prettier": "^5.2.1",
         "eslint-plugin-unicorn": "^56.0.1",
-        "globals": "^15.13.0"
+        "globals": "^15.13.0",
+        "typescript-eslint": "^8.24.0"
     },
     "devDependencies": {
         "@uvarovag/prettier-config": "^1.0.6",
         "prettier": "^3.4.1"
     },
     "peerDependencies": {
-        "eslint": "^9.16.0"
+        "eslint": "^9.20.1"
     }
 }

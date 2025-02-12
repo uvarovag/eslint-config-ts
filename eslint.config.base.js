@@ -1,29 +1,23 @@
-import jsConfig from '@eslint/js'
-import tsPlugin from '@typescript-eslint/eslint-plugin'
-import tsParser from '@typescript-eslint/parser'
+import eslint from '@eslint/js'
 import prettierConfig from 'eslint-config-prettier'
 import importPlugin from 'eslint-plugin-import'
 import prettierPlugin from 'eslint-plugin-prettier'
 import unicornPlugin from 'eslint-plugin-unicorn'
 import globals from 'globals'
+import tseslint from 'typescript-eslint'
 
-export default [
-    jsConfig.configs.recommended,
-    prettierConfig,
+export default tseslint.config(
     {
-        files: ['**/*.js', '**/*.ts', '**/*.jsx', '**/*.tsx'],
+        extends: [eslint.configs.recommended, tseslint.configs.recommended, prettierConfig],
+        files: ['**/*.{js,ts,jsx,tsx}'],
         languageOptions: {
-            parser: tsParser,
             sourceType: 'module',
-            ecmaVersion: 'latest',
+            ecmaVersion: 2020,
             globals: {
                 ...globals.browser,
-                IS_DEV: 'readonly',
-                BASE_URL: 'readonly',
             },
         },
         plugins: {
-            '@typescript-eslint': tsPlugin,
             prettier: prettierPlugin,
             import: importPlugin,
             unicorn: unicornPlugin,
@@ -40,7 +34,6 @@ export default [
         },
         rules: {
             ...unicornPlugin.configs.recommended.rules,
-            ...tsPlugin.configs.recommended.rules,
             'import/extensions': [
                 'error',
                 'ignorePackages',
@@ -84,16 +77,24 @@ export default [
                     },
                 },
             ],
+        },
+    },
+    {
+        files: ['**/*[sS]tore*.{js,ts}'],
+        rules: {
             'unicorn/prefer-spread': 'off',
         },
     },
     {
-        files: ['webpack.config.{js,ts,cjs,cts,mjs,mts}'],
+        files: ['{webpack,vite}.config.{js,ts,cjs,cts,mjs,mts}'],
         languageOptions: {
             globals: globals.node,
         },
+        rules: {
+            'unicorn/no-anonymous-default-export': 'off',
+        },
     },
     {
-        ignores: ['node_modules/**', 'dist/**'],
-    },
-]
+        ignores: ['node_modules', 'dist'],
+    }
+)
