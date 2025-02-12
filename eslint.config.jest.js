@@ -3,7 +3,7 @@ import globals from 'globals'
 
 export default [
     {
-        files: ['**/*.test.js', '**/*.test.ts', '**/*.test.jsx', '**/*.test.tsx'],
+        files: ['**/*.test.{js,ts,jsx,tsx}'],
         languageOptions: {
             globals: globals.jest,
         },
