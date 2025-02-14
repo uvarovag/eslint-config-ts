@@ -1,17 +1,17 @@
-import jestPlugin from 'eslint-plugin-jest'
+import vitest from '@vitest/eslint-plugin'
 import globals from 'globals'
 
 export default [
     {
         files: ['**/*.test.{js,ts,jsx,tsx}'],
         languageOptions: {
-            globals: globals.jest,
+            globals: globals.vitest,
         },
         plugins: {
-            jest: jestPlugin,
+            vitest,
         },
         rules: {
-            ...jestPlugin.configs.recommended.rules,
+            ...vitest.configs.recommended.rules,
         },
     },
 ]
