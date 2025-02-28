@@ -87,6 +87,12 @@ export default tseslint.config(
         },
     },
     {
+        files: ['**/*.test.*'],
+        rules: {
+            'unicorn/*': 'off',
+        },
+    },
+    {
         files: ['{webpack,vite}.config.{js,ts,cjs,cts,mjs,mts}'],
         languageOptions: {
             globals: globals.node,
