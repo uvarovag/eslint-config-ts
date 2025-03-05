@@ -2,6 +2,7 @@ import eslint from '@eslint/js'
 import prettierConfig from 'eslint-config-prettier'
 import importPlugin from 'eslint-plugin-import'
 import prettierPlugin from 'eslint-plugin-prettier'
+import sortDestructureKeysPlugin from 'eslint-plugin-sort-destructure-keys'
 import unicornPlugin from 'eslint-plugin-unicorn'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
@@ -18,8 +19,9 @@ export default tseslint.config(
             },
         },
         plugins: {
-            prettier: prettierPlugin,
             import: importPlugin,
+            prettier: prettierPlugin,
+            'sort-destructure-keys': sortDestructureKeysPlugin,
             unicorn: unicornPlugin,
         },
         settings: {
@@ -34,6 +36,12 @@ export default tseslint.config(
         },
         rules: {
             ...unicornPlugin.configs.recommended.rules,
+            '@typescript-eslint/consistent-type-imports': [
+                'error',
+                {
+                    prefer: 'type-imports',
+                },
+            ],
             'import/extensions': [
                 'error',
                 'ignorePackages',
@@ -62,12 +70,7 @@ export default tseslint.config(
                     'newlines-between': 'always',
                 },
             ],
-            '@typescript-eslint/consistent-type-imports': [
-                'error',
-                {
-                    prefer: 'type-imports',
-                },
-            ],
+            'sort-destructure-keys/sort-destructure-keys': 'error',
             'unicorn/filename-case': [
                 'error',
                 {
