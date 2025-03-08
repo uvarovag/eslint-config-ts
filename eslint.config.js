@@ -42,6 +42,7 @@ export default tseslint.config(
                     prefer: 'type-imports',
                 },
             ],
+            eqeqeq: ['error', 'always'],
             'import/extensions': [
                 'error',
                 'ignorePackages',
@@ -81,6 +82,7 @@ export default tseslint.config(
                 },
             ],
             'unicorn/prevent-abbreviations': 'off',
+            'unicorn/no-array-for-each': 'off',
         },
     },
     {
